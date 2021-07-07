@@ -7,15 +7,17 @@ class ProductTag extends Model {}
 ProductTag.init(
   {
     // define columns
-    product_id:{type: DataTypes.INTEGER,allowNull:false},
-    tag_id:{type: DataTypes.INTEGER, allowNull:false}
+    id: {type: DataTypes.INTEGER, allowNull:false, primaryKey:true},
+    product_id: {type: DataTypes.INTEGER, allowNull:false, primaryKey:false},
+    tag_id: {type: DataTypes.INTEGER, allowNull:false, primaryKey:false}
+    
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product_tag',
+    modelName: 'producttag',
   }
 );
 
