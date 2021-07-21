@@ -10,3 +10,5 @@ This is a back end e-commerce site that gives the ability to update, create and 
 The user will need to have Insomnia Core and MySQL Workbench on their computer. The user will need to do a npm install and make sure to install dependencies mysql2, sequelize, express, and dotenv. 
 
 ## Walkthrough Video 
+
+[Walkthrough Video](https://drive.google.com/file/d/1pgyGjVOSzEe6fUxUIy_WaUL1xGuLXPJA/view)
