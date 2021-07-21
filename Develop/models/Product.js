@@ -11,9 +11,9 @@ Product.init(
   {
     // define columns
     product_name:{type: DataTypes.STRING, allowNull:false}, 
-    price:{type: DataTypes.DECIMAL, allowNull:false},
-    stock:{type: DataTypes.INTEGER, allowNull:true},
-    category_id:{type: DataTypes.INTEGER, allowNull:true}
+    price:{type: DataTypes.DECIMAL(10), allowNull:false, validate: { isDecimal: true}},
+    stock:{type: DataTypes.INTEGER, allowNull:false, validate: { isNumeric: true}},
+    category_id:{type: DataTypes.INTEGER, references:{ model: 'category', key: 'id', unique: false}, allowNull:true}
   },
   {
     sequelize,
